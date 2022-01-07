@@ -72,7 +72,7 @@ class _HomeScreenState extends State<MenuNavegacion> {
       body: Container(
         color: Colors.blueAccent,
         child: Center(
-          //child: Text(pageactual.toString(), textScaleFactor: 10.0,),
+          
           child: _showpage,
         ),
 
