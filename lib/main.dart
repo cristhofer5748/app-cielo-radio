@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:radio_cielo/components/inicio_sesion.dart';
 import 'package:radio_cielo/nav/navbar.dart';
-import 'package:radio_cielo/screens/admin.dart';
+import 'package:radio_cielo/components/admin/admin.dart';
+
+import 'components/admin/admin.dart';
 
 
 void main() => runApp(const MyApp());

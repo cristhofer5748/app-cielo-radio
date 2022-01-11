@@ -2,7 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:radio_cielo/components/login.dart';
 import 'package:radio_cielo/screens/verses.dart';
-import 'package:radio_cielo/screens/admin.dart';
+import 'package:radio_cielo/components/admin/admin.dart';
 import 'package:radio_cielo/screens/chat.dart';
 import 'package:radio_cielo/screens/contact.dart';
 import 'package:radio_cielo/screens/home.dart';
@@ -24,7 +24,7 @@ class _HomeScreenState extends State<MenuNavegacion> {
   final LoginApp loginApp = const LoginApp();
 
    // ignore: unused_field
-   Widget _showpage = const AdminApp();
+   Widget _showpage = const HomePrincipal();
 
   int pageactual = 2;
   Widget _pageOther(int index) {
@@ -39,6 +39,8 @@ class _HomeScreenState extends State<MenuNavegacion> {
         return chat;
       case 4:
         return loginApp;
+      case 5:
+        return adminApp;
 
       default:
         return const HomePrincipal();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:radio_cielo/screens/admin.dart';
+import 'package:radio_cielo/components/admin/admin.dart';
 import 'package:radio_cielo/utils/responsive.dart';
 import 'package:radio_cielo/widgets/icon_container.dart';
 
@@ -11,22 +11,23 @@ class InicioSesion extends StatelessWidget {
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
     return Scaffold(
-      
       body: Container(
         constraints: BoxConstraints(
           maxWidth: responsive.isTablet ? 1200 : 1200,
-          
         ),
         height: double.infinity,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: <Color>[
-            Colors.blue,
-            Colors.white,
-          ], begin: Alignment.topCenter),
+        decoration:   BoxDecoration(
+          gradient: LinearGradient( 
+          
+          colors: [Colors.blue.shade900, Colors.white],
+          stops: const [0.2,0.5],
+          begin: FractionalOffset.topRight,
+          end: FractionalOffset.bottomLeft
+          
+          ),
         ),
         child: ListView(
-          
           padding: const EdgeInsets.symmetric(
             horizontal: 40.0,
             vertical: 40.0,
@@ -56,22 +57,65 @@ class InicioSesion extends StatelessWidget {
                       style: GoogleFonts.aclonica(
                           fontSize: 20, color: Colors.black),
                     ),
-                    TextFormField(
-                      decoration:
-                          const InputDecoration(labelText: 'Ingrese su Correo'),
+                    const Divider(
+                      height: 50,
+                      color: Colors.transparent,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 2),
+                      child: TextFormField(
+                        decoration:   InputDecoration(
+                            labelText: 'Ingrese su Correo',
+                            labelStyle: GoogleFonts.acme(
+                          fontSize: 20, color: Colors.grey.shade800
+                          ),
+                            fillColor: Colors.transparent,
+                            filled: true,
+                            border: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(50.0),
+                              ),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 10.0,
+                              )
+                            ),
+                            
+                            ),
+                      ),
                     ),
                     const Divider(
                       height: 25,
                       color: Colors.transparent,
                     ),
-                    TextFormField(
-                      decoration: const InputDecoration(
-                          labelText: 'Ingrese su Contraseña'),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 2),
+                      child: TextFormField(
+                        decoration:  InputDecoration(
+                            labelText: 'Ingrese su Contraseña',
+                            labelStyle: GoogleFonts.acme(
+                          fontSize: 20, color: Colors.grey.shade800
+                          ),
+                            fillColor: Colors.transparent,
+                            filled: true,
+                            border: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(50.0),
+                              ),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 10.0,
+                              )
+                            ),
+                            ),
+                      ),
                     ),
                   ],
                 ),
                 const Divider(
-                  height: 100.0,
+                  height: 60.0,
                   color: Colors.transparent,
                 ),
                 SizedBox(

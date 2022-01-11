@@ -10,10 +10,10 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 220.0,
+      height: 200.0,
       width: 220.0,
       child:  CircleAvatar(
-        radius: 100.0,
+        radius: 50.0,
         backgroundColor: Colors.transparent,
         backgroundImage: AssetImage(url),
       ),
