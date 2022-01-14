@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:radio_cielo/components/inicio_sesion.dart';
+import 'package:radio_cielo/components/login/inicio_sesion.dart';
+import 'package:radio_cielo/nav/navbar.dart';
 import 'package:radio_cielo/utils/responsive.dart';
 
 
@@ -30,6 +31,7 @@ class _LoginAppState extends State<LoginApp> {
           maxWidth: responsive.isTablet?1200:1200,
 
         ),
+        
       
         
         height: double.infinity,
@@ -46,6 +48,18 @@ class _LoginAppState extends State<LoginApp> {
             vertical: 40.0,
           ),
           children: <Widget>[
+            Row(
+              children: [
+                                BackButton(
+                  color: Colors.black,
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const MenuNavegacion(),
+                    ));
+                  },
+                ),
+              ],
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

@@ -1,10 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:radio_cielo/components/login.dart';
+import 'package:radio_cielo/components/login/login.dart';
 import 'package:radio_cielo/screens/verses.dart';
 import 'package:radio_cielo/components/admin/admin.dart';
-import 'package:radio_cielo/screens/chat.dart';
-import 'package:radio_cielo/screens/contact.dart';
+import 'package:radio_cielo/components/chat/chat.dart';
+import 'package:radio_cielo/components/contact/contact.dart';
 import 'package:radio_cielo/screens/home.dart';
 
 class MenuNavegacion extends StatefulWidget {
@@ -52,13 +52,14 @@ class _HomeScreenState extends State<MenuNavegacion> {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         index: pageactual,
-        items: const <Widget>[
+        items:  const <Widget>[
           
-          Icon(Icons.contact_page, size: 30,),
-          Icon(Icons.menu_book, size: 30),
-          Icon(Icons.home, size: 30),
-          Icon(Icons.chat, size: 30),
-          Icon(Icons.person, size: 30),
+           Icon(Icons.contact_page, size: 30,),
+           Icon(Icons.menu_book, size: 30),
+           Icon(Icons.home, size: 30),
+           Icon(Icons.chat, size: 30),
+           Icon(Icons.person, size: 30),
+          
         ],
         color: Colors.blue,
         buttonBackgroundColor: Colors.white,
