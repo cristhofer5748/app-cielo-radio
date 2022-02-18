@@ -36,9 +36,9 @@ class _LoginAppState extends State<LoginApp> {
         
         height: double.infinity,
         width: double.infinity,
-        decoration: const BoxDecoration(
+        decoration:  BoxDecoration(
           gradient: LinearGradient(colors: <Color>[
-            Colors.blue,
+            Colors.blue.shade900,
             Colors.white,
           ], begin: Alignment.topCenter),
         ),
@@ -47,6 +47,7 @@ class _LoginAppState extends State<LoginApp> {
             horizontal: 40.0,
             vertical: 40.0,
           ),
+
           children: <Widget>[
             Row(
               children: [

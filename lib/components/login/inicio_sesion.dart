@@ -106,7 +106,8 @@ class InicioSesion extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 10, vertical: 2),
                         child: TextFormField(
-                          keyboardType:  TextInputType.text,
+                          
+                          keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             labelText: 'Ingrese su Contraseña',
                             labelStyle: GoogleFonts.acme(
@@ -122,6 +123,11 @@ class InicioSesion extends StatelessWidget {
                                   width: 10.0,
                                 )),
                           ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return "Ingrese una Contraseña";
+                            }
+                          },
                         ),
                       ),
                     ],
@@ -130,17 +136,15 @@ class InicioSesion extends StatelessWidget {
                     height: 60.0,
                     color: Colors.transparent,
                   ),
-                  SizedBox(
-                    width: 250,
-                    height: 40.0,
+                  Container(
+                    width: double.infinity,
                     child: FlatButton(
                       color: Colors.grey[700],
                       onPressed: () {
-
-                        if (_keyform.currentState.validate()) {
+                        //if (_keyform.currentState.validate()) {
                           
-                        } else {
-                        }
+                        //}
+
 
                         final route = MaterialPageRoute(
                             builder: (context) => const AdminApp());

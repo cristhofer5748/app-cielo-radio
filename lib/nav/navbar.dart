@@ -5,7 +5,7 @@ import 'package:radio_cielo/screens/verses.dart';
 import 'package:radio_cielo/components/admin/admin.dart';
 import 'package:radio_cielo/components/chat/chat.dart';
 import 'package:radio_cielo/components/contact/contact.dart';
-import 'package:radio_cielo/screens/home.dart';
+import 'package:radio_cielo/components/home/home.dart';
 
 class MenuNavegacion extends StatefulWidget {
   const MenuNavegacion({Key? key}) : super(key: key);
@@ -50,7 +50,14 @@ class _HomeScreenState extends State<MenuNavegacion> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+          iconTheme: const IconThemeData(color: Colors.black)
+        ),
+
+      
+      
+      child: CurvedNavigationBar(
         index: pageactual,
         items:  const <Widget>[
           
@@ -62,15 +69,17 @@ class _HomeScreenState extends State<MenuNavegacion> {
           
         ],
         color: Colors.blue,
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.white,
+        buttonBackgroundColor: Colors.blue,
+        backgroundColor: Colors.transparent,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (int tappedIndex){
           setState(() {
+            
             _showpage = _pageOther(tappedIndex);
           });
         },
+      ),
       ),
       body: Container(
         color: Colors.blueAccent,

@@ -14,7 +14,7 @@ class _VersesState extends State<Verses> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange,
+      color: Colors.white,
     );
   }
 }

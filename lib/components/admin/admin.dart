@@ -156,6 +156,7 @@ Widget seccionVersiculo(double ancho) {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.0)),
                         child: FlatButton(
+                          
                           color: Colors.amber,
                           onPressed: () {
                             //final route = MaterialPageRoute(
@@ -237,6 +238,7 @@ Widget locutoresSemanales() {
         SizedBox(
           width: 50.0,
           child: FloatingActionButton(
+            heroTag: 'adminLocutores',
             onPressed: () {},
             child: const Text(
               "+",
@@ -275,6 +277,7 @@ Widget seccionBiblicas() {
           SizedBox(
             width: 35.0,
             child: FloatingActionButton(
+              heroTag: 'adminBiblicas',
               onPressed: () {},
               child: const Text(
                 "+",

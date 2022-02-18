@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:radio_cielo/nav/navbar.dart';
-import 'package:radio_cielo/screens/home.dart';
+import 'package:radio_cielo/components/home/home.dart';
 
 class Chat extends StatefulWidget {
   const Chat({Key? key}) : super(key: key);
